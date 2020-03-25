@@ -22,20 +22,10 @@ h1 {
   width: 100%;
   height: 100%;
 }
-.container {
-  height: 100%;
-    padding: 0;
-    margin: 0;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 .page_wrapper {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,9 +35,12 @@ h1 {
 /*Barre superieure icones : flexbox*/
 .header {
   display: flex;
-  flex-direction: row-reverse;
-  align-items: baseline;
+  justify-content: flex-end;
+  flex-direction: row;
+  align-items: center;
   overflow: hidden;
+  margin-top: 15px;
+  margin-right: 10px;
 }
 
 /*Barre boutons inferieure : flexbox*/
@@ -60,6 +53,9 @@ h1 {
 /*Icones barre superieure*/
 .icon_bar {
   color: white;
+  height: 50px;
+  margin-right: 5px;
+  align-items: center;
 }
 
 /*boutons barre inferieure*/
@@ -107,5 +103,35 @@ h1 {
 }
 
 .main_buttons:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 8px 8px 0 #006400, 0 15px 25px 0 rgba(0,0,0,0.19);
+}
+
+
+/*bouton menu*/
+.menu_icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.bar1, .bar2, .bar3 {
+  border-radius: 8px;
+  width: 35px;
+  height: 5px;
+  background-color: grey;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
 }

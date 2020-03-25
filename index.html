@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <link rel="stylesheet" type="text/css" href="style.css">
+   <script src="functions.js"></script>
   <!--<link rel="stylesheet" type="text/css" href="background.css">-->
 <title>Mr Chaigne Hyacinthe</title>
 </head>
@@ -9,16 +10,19 @@
 <body>
 <!-------------------------->
   <div class="header">
-    <img class="icon_bar" src="CV_icon.png" alt="Lien CV">
-    <img class="icon_bar" src="Linkedin_icon.png" alt="Lien LinkedIn">
-    <img class="icon_bar" src="Github_icon.png" alt="Lien Github">
-    <img class="icon_bar" src="Selector_icon.png" alt="Selecteur">
+    <img class="icon_bar" src="img/CV_icon.svg" alt="Lien CV">
+    <img class="icon_bar" src="img/Linkedin_icon.svg" alt="Lien LinkedIn">
+    <img class="icon_bar" src="img/Github_icon.svg" alt="Lien Github">
+    <div class="menu_icon" onclick="switchto(this)">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
   </div>
 
 <!-------------------------->
-<div class="container">
   <div class="page_wrapper">
-    <h1>Hyacinthe Chaigne</h1>
+    <h1>Hyacinthe Chaigne.</h1>
 
     <div class="button_bar">
       <button class="main_buttons" style="vertical-align:middle"><span>A propos...</span></button>
@@ -27,7 +31,6 @@
       <button class="main_buttons" style="vertical-align:middle"><span>Contact</span></button>
     </div>
   </div>
-</div>
 <!-------------------------->
   <div class="page_bg"></div>
 
