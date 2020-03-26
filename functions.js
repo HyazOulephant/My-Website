@@ -1,6 +1,7 @@
 
 var state = false;
 
+//JavaScript
 function switchto(x) {
   x.classList.toggle("change");
   if (state == false) {
@@ -21,8 +22,16 @@ function closeMenu() {
   document.getElementById("monmenu").style.width = "0";
 }
 
-//TODO plus tard
-//https://www.w3schools.com/jquery/jquery_intro.asp
-$(document).click(function(event) {
-  if(event.target.id != 'menu' || event.target.id != 'monmenu' ) {closeMenu();}
+
+//jQuery
+$(document).ready(function(){
+
+  $('.page_wrapper').click(function(event){
+    if (state == true) {
+      $('.menu_icon').toggleClass('change');
+      closeMenu();
+      state = false;
+    }
+  });
+
 });
