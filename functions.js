@@ -1,7 +1,11 @@
 
 var state = false;
+var page_actuelle = ["#", "MENU","_html"];
 
-//JavaScript
+/*    ####################
+      ##   JavaScript   ##
+      ####################
+*/
 function switchto(x) {
   x.classList.toggle("change");
   if (state == false) {
@@ -22,16 +26,58 @@ function closeMenu() {
   document.getElementById("monmenu").style.width = "0";
 }
 
+function closeMenuAfter() {
+  if (state == true) {
+    $('.menu_icon').toggleClass('change');
+    closeMenu();
+    state = false;
+  }
+}
 
-//jQuery
+
+
+/*    ####################
+      ##     jQuery     ##
+      ####################
+*/
+
+
 $(document).ready(function(){
-
+//Clic en dehors de menu déroulé
   $('.page_wrapper').click(function(event){
-    if (state == true) {
-      $('.menu_icon').toggleClass('change');
-      closeMenu();
-      state = false;
+    closeMenuAfter()
+  });
+
+//Changement de panneau |Résumer à une fonction pour chaque ne fonctionne pas
+
+  //barre menu déroulant
+  $('.menu').children().click(function(){
+    //console.log(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]);
+    //check ancienne et nouvelle page
+    if ($(this).attr('id') != page_actuelle[1]) {
+      //recompose classe
+      $(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]).hide("Drop");
+      $(page_actuelle[0]+$(this).attr('id')+page_actuelle[2]).show("Fade");
+      //remplace ancien element
+      page_actuelle[1] = $(this).attr('id');
+      closeMenuAfter()
     }
   });
+
+
+  //menu
+  $('.main_buttons').click(function(){
+    //console.log(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]);
+    //check ancienne et nouvelle page
+    if ($(this).attr('id') != page_actuelle[1]) {
+      //recompose classe
+      $(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]).hide("Drop");
+      $(page_actuelle[0]+$(this).attr('id')+page_actuelle[2]).show("Fade");
+      //remplace ancien element
+      page_actuelle[1] = $(this).attr('id');
+      closeMenuAfter() //Meme si pas ouvert
+    }
+  });
+
 
 });

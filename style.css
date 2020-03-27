@@ -190,3 +190,10 @@ h1 {
 .menu a:hover {
   color: #f1f1f1;
 }
+
+/*Controle texte affiché*/
+#MENU_html {}
+#APROPOS_html {display: none;}
+#PROJETS_html {display: none;}
+#EXPERIENCES_html {display: none;}
+#CONTACT_html {display: none;}
