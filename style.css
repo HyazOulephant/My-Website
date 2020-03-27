@@ -19,11 +19,11 @@ h1 {
   font-family: "Lucida Console", Monaco, monospace;
   filter: grayscale(20%);
 }
-.page_bg {
+.page_background {
   background: var(--dark-blue);
+  filter: grayscale(65%);
   background-blend-mode: screen;
   background-size: cover;
-  filter: grayscale(65%);
   z-index: -1;
   position: fixed;
   top: 0;
@@ -50,6 +50,31 @@ h1 {
   overflow: hidden;
   margin-top: 15px;
   margin-right: 10px;
+}
+
+.mini_menu:last-of-type {
+  margin-right: auto;
+  color: var(--light-white);
+  border-radius: 4px;
+  background-color: var(--light-green);
+  filter: grayscale(40%);
+  border: none;
+  color: var(--light-white);;
+  text-align: center;
+  font-size: 20px;
+  font-size-adjust: auto;
+  height: 55px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding-left: 5px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.mini_menu:hover {
+  background-color: var(--light-white);
+  color: black;
+  transition-duration: 0.4s;
 }
 
 /*Barre boutons inferieure : flexbox*/
@@ -197,3 +222,34 @@ h1 {
 #PROJETS_html {display: none;}
 #EXPERIENCES_html {display: none;}
 #CONTACT_html {display: none;}
+.mini_menu {display: none;}
+
+/*Pages*/
+
+/*CONTACTS*/
+.contact_wrap_line {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.contact_wrap_column {
+  display: flex;
+  flex-wrap: no-wrap;
+  flex-direction: column;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+#texte_gras {
+  font-weight: bold;
+  color: white;
+  font-size: 150%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#texte {
+  color: white;
+  font-size: 150%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}

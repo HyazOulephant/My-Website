@@ -60,12 +60,21 @@ $(document).ready(function(){
       $(page_actuelle[0]+$(this).attr('id')+page_actuelle[2]).show("Fade");
       //remplace ancien element
       page_actuelle[1] = $(this).attr('id');
-      closeMenuAfter()
+      closeMenuAfter();
+
+      //Bouton de retour menu
+      if ($(this).attr('id') != "MENU") {
+        $('.mini_menu').show();
+      }
+      else {
+        $('.mini_menu').hide();
+      }
+
     }
   });
 
 
-  //menu
+  //mmini_menu
   $('.main_buttons').click(function(){
     //console.log(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]);
     //check ancienne et nouvelle page
@@ -76,8 +85,34 @@ $(document).ready(function(){
       //remplace ancien element
       page_actuelle[1] = $(this).attr('id');
       closeMenuAfter() //Meme si pas ouvert
+
+      //Bouton de retour menu
+      if ($(this).attr('id') != "MENU") {
+        $('.mini_menu').show();
+      }
+      else {
+        $('.mini_menu').hide();
+      }
     }
   });
 
+  $('.mini_menu').click(function(){
+    if ($(this).attr('id') != page_actuelle[1]) {
+      //recompose classe
+      $(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]).hide("Drop");
+      $(page_actuelle[0]+$(this).attr('id')+page_actuelle[2]).show("Fade");
+      //remplace ancien element
+      page_actuelle[1] = $(this).attr('id');
+      closeMenuAfter() //Meme si pas ouvert
+
+      //Bouton de retour menu
+      if ($(this).attr('id') != "MENU") {
+        $('.mini_menu').show();
+      }
+      else {
+        $('.mini_menu').hide();
+      }
+    }
+  });
 
 });
