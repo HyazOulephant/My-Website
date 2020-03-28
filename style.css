@@ -5,12 +5,49 @@
   --light-white: #639a67;
 }
 
+
+/*Titres */
 h1 {
   color: var(--smooth-orange);
   font-size: 111px;
   font-family: "Lucida Console", Monaco, monospace;
   filter: grayscale(20%);
 }
+
+#decalage { /*Titre main page*/
+  padding-top: 10%;
+}
+
+/*Edition texte*/
+.gap {
+  height: 10px;
+  width: 10px;
+}
+
+.texte_gras {
+  font-weight: bold;
+}
+
+.texte, .texte_gras  {
+  color: gray;
+  font-size: 150%;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.text_wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.mini-texte {
+  font-size: 65%;
+}
+
+li {
+  margin-bottom: 3%;
+}
+
+/*Centre page*/
 .page_background {
   background: var(--dark-blue);
   filter: grayscale(65%);
@@ -44,7 +81,7 @@ h1 {
   margin-right: 10px;
 }
 
-.mini_menu:last-of-type {
+#mini_menu:last-of-type {
   margin-right: auto;
   color: var(--light-white);
   border-radius: 4px;
@@ -63,7 +100,7 @@ h1 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-.mini_menu:hover {
+#mini_menu:hover {
   background-color: var(--light-white);
   color: black;
   transition-duration: 0.4s;
@@ -214,7 +251,7 @@ h1 {
 #PROJETS_html {display: none;}
 #EXPERIENCES_html {display: none;}
 #CONTACT_html {display: none;}
-.mini_menu {display: none;}
+#mini_menu {display: none;}
 
 /*Pages*/
 
@@ -230,31 +267,4 @@ h1 {
   flex-wrap: no-wrap;
   flex-direction: column;
   margin-right: 10%;
-}
-
-
-
-/*Edition texte*/
-.gap {
-  height: 10px;
-  width: 10px;
-}
-
-.texte_gras {
-  font-weight: bold;
-}
-
-.texte, .texte_gras  {
-  color: gray;
-  font-size: 150%;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
-
-.text_wrapper {
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.mini-texte {
-  font-size: 65%;
 }
