@@ -74,7 +74,7 @@ $(document).ready(function(){
   });
 
 
-  //mmini_menu
+  //mini_menu
   $('.main_buttons').click(function(){
     //console.log(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]);
     //check ancienne et nouvelle page

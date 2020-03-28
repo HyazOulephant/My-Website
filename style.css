@@ -5,14 +5,6 @@
   --light-white: #639a67;
 }
 
-
-html, body {
-  height: 100%;
-}
-
-body {
-  overflow: hidden;
-}
 h1 {
   color: var(--smooth-orange);
   font-size: 111px;
@@ -238,18 +230,31 @@ h1 {
   flex-wrap: no-wrap;
   flex-direction: column;
   margin-right: 10%;
-  margin-top: 5%;
 }
 
-#texte_gras {
+
+
+/*Edition texte*/
+.gap {
+  height: 10px;
+  width: 10px;
+}
+
+.texte_gras {
   font-weight: bold;
-  color: white;
+}
+
+.texte, .texte_gras  {
+  color: gray;
   font-size: 150%;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-#texte {
-  color: white;
-  font-size: 150%;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+.text_wrapper {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.mini-texte {
+  font-size: 65%;
 }
