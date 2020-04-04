@@ -4,6 +4,7 @@ var page_actuelle = ["#", "MENU","_html"];
 var tab_upper = [];
 var clicked;
 var clic;
+var delai = 50;
 
 /*    ####################
       ##   JavaScript   ##
@@ -60,7 +61,7 @@ $(document).ready(function(){
     if ($(this).attr('class') != page_actuelle[1]) {
       //recompose classe
       $(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]).hide("Drop");
-      $(page_actuelle[0]+$(this).attr('class')+page_actuelle[2]).show("Fade");
+      $(page_actuelle[0]+$(this).attr('class')+page_actuelle[2]).delay(delai).show("Fade");
       //remplace ancien element
       page_actuelle[1] = $(this).attr('class');
       closeMenuAfter();
@@ -95,12 +96,12 @@ $(document).ready(function(){
     if (clicked != page_actuelle[1]) {
       //recompose classe
       $(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]).hide("Drop");
-      $(page_actuelle[0]+clicked+page_actuelle[2]).show("Fade");
+      $(page_actuelle[0]+clicked+page_actuelle[2]).delay(delai).show("Fade");
       //remplace ancien element
       page_actuelle[1] = clicked;
       //Efface contenu
       tab_upper=[];
-      
+
       closeMenuAfter() //Meme si pas ouvert
 
       //Bouton de retour menu
@@ -119,7 +120,7 @@ $(document).ready(function(){
     if ($(this).attr('class') != page_actuelle[1]) {
       //recompose classe
       $(page_actuelle[0]+page_actuelle[1]+page_actuelle[2]).hide("Drop");
-      $(page_actuelle[0]+$(this).attr('class')+page_actuelle[2]).show("Fade");
+      $(page_actuelle[0]+$(this).attr('class')+page_actuelle[2]).delay(delai).show("Fade");
       //remplace ancien element
       page_actuelle[1] = $(this).attr('class');
       closeMenuAfter() //Meme si pas ouvert

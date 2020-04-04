@@ -5,7 +5,6 @@
   --light-white: #639a67;
 }
 
-
 /*Titres */
 h1 {
   color: var(--smooth-orange);
@@ -102,6 +101,7 @@ li {
 
 #mini_menu:hover {
   background-color: var(--light-white);
+
   color: black;
   transition-duration: 0.4s;
 }
