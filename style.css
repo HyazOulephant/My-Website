@@ -1,7 +1,7 @@
 :root {
   --smooth-orange: #ff6337;
   --light-green: #004a2f;
-  --dark-blue: #002f35;
+  --background_color: #002f35;
   --light-white: #639a67;
 }
 
@@ -48,8 +48,8 @@ li {
 
 /*Centre page*/
 .page_background {
-  background: var(--dark-blue);
-  filter: grayscale(65%);
+  background: var(--background_color);
+
   background-blend-mode: screen;
   background-size: cover;
   z-index: -1;

@@ -1,0 +1,20 @@
+:root {
+  --smooth-orange: #ff6337;
+  --light-green: #004a2f;
+  --dark-blue: #002f35;
+  --light-white: #639a67;
+}
+
+:root {
+  --smooth-orange: #ff6337;
+  --light-green: #285858;
+  --background_color: #383c23;
+  --light-white: #ded3b0;
+}
+
+:root {
+  --smooth-orange: #ff9671;
+  --light-green: #ea496f;
+  --background_color: #40547e;
+  --light-white: #ded3b0;
+}
