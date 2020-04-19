@@ -303,6 +303,7 @@ li {
 
 .image {
   width:100%;
+  height: auto;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
@@ -316,4 +317,29 @@ li {
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+/Edge */
   user-select: none; /* Standard */
+}
+
+
+/*Telephone*/
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  h1 {
+    font-size: 300%;
+  }
+  .texte, .texte_gras {
+    font-size: 111%;
+  }
+
+  .contact_wrap_line {
+    padding-left: 5%;
+  }
+
+  .contact_wrap_column {
+    margin-right: 5%;
+  }
+
+  .titre {
+    padding: 0px 0px;
+  }
+
 }
